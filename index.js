@@ -4,6 +4,8 @@ import bodyParser from 'body-parser';
 const app = express();
 const PORT = 4000;
 
+
+mongoose.connect('mongodb://localhost:27017/productsdb', {useNewUrlParser: true, useUnifiedTopolog:true});
 // bodyparser setup
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); 
